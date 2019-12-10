@@ -5,6 +5,7 @@
 The framework provides an interface that works as a bridge between the NurAPI and a transport that is used for communication with the reader device. ''DeviceDiscoverer'' is used for enumerating the devices that can be used with the ''NurAPI''.
 
 ## Supported platforms and transports
+**NordicID.NurApi.Net** Common .NET Standard 1.2 API library
 **NordicID.NurApi.Android** Xamarin Android (Bluetooth LE)  
 **NordicID.NurApi.iOS** Xamarin iOS (Bluetooth LE)  
 **NordicID.NurApi.DotnetFramework** .NET Framework 4.6.1 (USB)  

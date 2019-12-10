@@ -20,6 +20,84 @@ using NordicID.NurApi.Net;
 using NordicID.NurApi.Android;
 ```
 
+Android requires location and bluetooth permission on the AndroidManifest.xml file.
+```xml
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	<uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+```
+Android also requires querying permission for the location from the user. This depends on what type the application is so it must be implemented into the app. For example for Xamarin Forms.
+```csharp
+using Android.Support.V4.Content;
+using Android.Support.V4.App;
+
+public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    {
+.
+.
+.
+
+List<string> _permission = new List<string>();
+
+        private void RequestPermissionsManually()
+        {
+            try
+            {
+                if (ContextCompat.CheckSelfPermission(this, Manifest.Permission.AccessFineLocation) != Permission.Granted)
+                    _permission.Add(Manifest.Permission.AccessFineLocation);
+
+
+                if (_permission.Count > 0)
+                {
+                    string[] array = _permission.ToArray();
+                    ActivityCompat.RequestPermissions(this, array, array.Length);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+        override public void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
+        {
+            //location || storage
+            if (requestCode == 2 || requestCode == 5)
+            {
+                if (grantResults.Length == _permission.Count)
+                {
+                    for (int i = 0; i < requestCode; i++)
+                    {
+                        if (grantResults[i] == Permission.Granted)
+                        {
+                            //do nothing, we already have permissions granted
+                        }
+                        else
+                        {
+                            _permission = new List<string>();
+                            RequestPermissionsManually();
+                            break;
+                        }
+                    }
+                }
+
+            }
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+```
+
+iOS requires Bluetooth usage descriptions to be added to Info.plist
+```xml
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Required for reader connection</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>This app needs to access an RFID reader.</string>
+```
+
+
 ## Discovering devices
 
 Create the ``DeviceDiscoverer`` instance and initialize it with the app context
@@ -52,7 +130,7 @@ api.Connect(uri);
 ```
 
 ```csharp
-public class MainActivity : Activity, *NurApiListener*
+public class MainActivity : Activity, NurApiListener
     {
         
 ```

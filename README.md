@@ -8,8 +8,8 @@ The framework provides an interface that works as a bridge between the NurAPI an
 **NordicID.NurApi.Net** Common .NET Standard 1.2 API library
 **NordicID.NurApi.Android** Xamarin Android (Bluetooth LE)  
 **NordicID.NurApi.iOS** Xamarin iOS (Bluetooth LE)  
-**NordicID.NurApi.DotnetFramework** .NET Framework 4.6.1 (USB)  
-**NordicID.NurApi.DotnetCore** .NET Core 1.1 (USB)
+**NordicID.NurApi.DotnetFramework** .NET Framework 4.6.1 (Serial)  
+**NordicID.NurApi.DotnetCore** .NET Core 1.1 (Serial)
 
 ## Using the framework
 

@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html ><html lang="en-US"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" href="../css/bulma.css" /><link rel="stylesheet" href="../css/font-awesome.min.css" /><link rel="stylesheet" href="../css/presentationStyle.css" /><link rel="stylesheet" href="../css/vs.min.css" /><script src="../scripts/jquery-3.5.1.min.js"></script><script src="../scripts/clipboard.min.js"></script><script src="../scripts/highlight.min.js"></script><script src="../scripts/presentationStyle.js"></script><title>SetupFlags Enumeration</title><meta name="Title" content="SetupFlags" /><meta name="Help.Id" content="T:NurApiDotNet.SetupFlags" /><meta name="Help.ContentType" content="Reference" /><meta name="container" content="NurApiDotNet" /><meta name="guid" content="9f0a2e5b-d20d-01ff-6ef7-e105428b6f0a" /><meta name="Description" content="Module setup flags" /><meta name="tocFile" content="../toc/IDA.xml" /></head><body><div class="fixedLayout"><div id="Header" class="fixedHeader"><div class="pageHeader level mb-0 py-2 px-4"><div id="TitleContainer" class="level-left"><div id="DocumentationTitle" class="level-item">Nurapi Class Library</div></div><div id="LangFilterSearchContainer" class="level-right"><div class="level-item"><div class="dropdown is-hoverable"><div class="dropdown-trigger"><button class="button" aria-haspopup="true" aria-controls="dropdown-menu"><span id="CurrentLanguage"></span><span class="icon is-small"><i class="fa fa-angle-down" aria-hidden="true"></i></span></button></div><div class="dropdown-menu" role="menu"><div id="LanguageSelections" class="dropdown-content"><a class="dropdown-item languageFilterItem" data-languageId="cs">C#</a></div></div></div></div><div class="level-item"><form id="SearchForm" action="#" onsubmit="TransferToSearchPage(); return false;"><div class="field"><div class="control has-icons-left"><input id="SearchTerms" class="input" type="text" maxlength="200" placeholder="Search" /><span class="icon is-small is-left"><i class="fa fa-search"></i></span><button id="SearchButton" type="submit" class="is-hidden"></button></div></div></form></div></div></div></div><div class="fixedContent"><nav class="breadcrumb my-1 px-2 border-bottom" role="navigation"><ul id="TopicBreadcrumbs" /></nav><div class="columns pl-5 pr-5 fixedContent"><div id="ShowHideTOCColumn" class="column is-hidden-tablet"><a id="ShowHideTOC">Show/Hide TOC</a></div><div id="TOCColumn" class="column is-hidden-mobile"><nav class="toc"><ul id="TableOfContents" class="toc-menu" /></nav></div><div id="TopicContent" class="column content is-7"><h1>Setup<wbr />Flags Enumeration</h1><div class="summary">
+            Module setup flags
+            </div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>Definition</h2><div id="IDBSection"><strong>Namespace:</strong> <a href="29411023-0052-089d-f65f-b19dc7aea29c.htm">NurApiDotNet</a><br /><strong>Assembly:</strong> NordicID.NurApi.Net (in NordicID.NurApi.Net.dll) Version: 4.0.0<div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs">[<span class="identifier">FlagsAttribute</span>]
+<span class="keyword">public</span> <span class="keyword">enum</span> <span class="identifier">SetupFlags</span></code></pre></div></div></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>Members</h2><div id="IDADASection"><table id="enumMemberList" class="table is-hoverable"><tr><td>LinkFreq</td><td>1</td><td>
+            Link frequency. See also the link frequency property: <a href="d40796d0-c9de-af07-664c-507365eb5ec9.htm">LinkFrequency</a></td></tr><tr><td>RxDec</td><td>2</td><td><p>RX encoding (Miller encoding) (see<a href="d8d1ea0e-58c4-6521-3717-3bb64616ee66.htm">RxDecoding</a> property)</p></td></tr><tr><td>TxLevel</td><td>4</td><td>
+            Transmission (TX) power level in 1dB steps. See also the <span class="selflink">TxLevel</span> property)			
+            <p>Range is 0...19: there are 20 (0...19) steps so minimum output power value for 500mW devices is 8dBm (about 6mW) and 11dBm (about 40W) for the 1W devices.</p><p>This value is subtracted from the maxiumum TX level producing the actual level as follows:</p><table class="table is-hoverable"><thead><tr><th>TX Level</th><th>Power dBm / mW (500 mW device)</th><th>Power dBm / mW (1W device)</th></tr></thead><tr><td>0</td><td>27 / 500</td><td>30 / 1000</td></tr><tr><td>1</td><td>26 / 398</td><td>29 / 794</td></tr><tr><td>2</td><td>25 / 316</td><td>28 / 631</td></tr><tr><td>3</td><td>24 / 251</td><td>27 / 501</td></tr><tr><td>4</td><td>23 / 200</td><td>26 / 398</td></tr><tr><td>5</td><td>22 / 158</td><td>25 / 316</td></tr><tr><td>6</td><td>21 / 126</td><td>24 / 251</td></tr><tr><td>7</td><td>20 / 100</td><td>23 / 200</td></tr><tr><td>8</td><td>19 / 79</td><td>22 / 158</td></tr><tr><td>9</td><td>18 / 63</td><td>21 / 126</td></tr><tr><td>10</td><td>17 / 50</td><td>20 / 100</td></tr><tr><td>11</td><td>16 / 40</td><td>19 / 79</td></tr><tr><td>12</td><td>15 / 32</td><td>18 / 63</td></tr><tr><td>13</td><td>14 / 25</td><td>17 / 50</td></tr><tr><td>14</td><td>13 / 20</td><td>16 / 40</td></tr><tr><td>15</td><td>12 / 16</td><td>15 / 32</td></tr><tr><td>16</td><td>11 / 13</td><td>14 / 25</td></tr><tr><td>17</td><td>10 / 10</td><td>13 / 20</td></tr><tr><td>18</td><td>9 / 8</td><td>12 / 16</td></tr><tr><td>19</td><td>8 / 6</td><td>11 / 13</td></tr></table></td></tr><tr><td>TxMod</td><td>8</td><td>
+            Tx modulation style. (see <a href="ce283e8f-55b9-54ec-ab33-63158dd9a07d.htm">TxModulation</a> property)        
+            </td></tr><tr><td>Region</td><td>16</td><td>
+            Region. (see <a href="f2c4e8ce-e00a-7519-4f3b-63732a1a69ed.htm">RegionId</a>)
+            </td></tr><tr><td>InventoryQ</td><td>32</td><td>
+            Default Q used for inventory. (0-15) 0=Automatic
+            </td></tr><tr><td>InventorySession</td><td>64</td><td>
+            Default session for inventory. <a href="653f01df-ce69-f91b-11cd-254a501c917d.htm">TargetSession</a>.
+            </td></tr><tr><td>InventoryRounds</td><td>128</td><td>
+             Default rounds for inventory. (0 - 10) 0=Automatic
+            </td></tr><tr><td>AntennaMask</td><td>256</td><td>
+            Antenna mask field in <a href="73de3ca5-4131-b36d-8e87-bb0fa46372de.htm">NurApi<span id="LST1F4557F_0" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ModuleSetup</a>.
+            </td></tr><tr><td>ScanSingleTimeout</td><td>512</td><td>
+            Scan single trigger timeout field in <a href="73de3ca5-4131-b36d-8e87-bb0fa46372de.htm">NurApi<span id="LST1F4557F_1" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ModuleSetup</a>.
+            </td></tr><tr><td>InventoryTimeout</td><td>1,024</td><td>
+            Inventory trigger timeout field in <a href="73de3ca5-4131-b36d-8e87-bb0fa46372de.htm">NurApi<span id="LST1F4557F_2" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ModuleSetup</a>.
+            </td></tr><tr><td>SelectedAntenna</td><td>2,048</td><td>
+            Selected antenna field in <a href="73de3ca5-4131-b36d-8e87-bb0fa46372de.htm">NurApi<span id="LST1F4557F_3" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ModuleSetup</a>. 
+            </td></tr><tr><td>OperationFlags</td><td>4,096</td><td>
+            Operation flags field in <a href="73de3ca5-4131-b36d-8e87-bb0fa46372de.htm">NurApi<span id="LST1F4557F_4" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ModuleSetup</a>.
+            </td></tr><tr><td>InventoryTarget</td><td>8,192</td><td>
+            Inventory target field in <a href="73de3ca5-4131-b36d-8e87-bb0fa46372de.htm">NurApi<span id="LST1F4557F_5" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ModuleSetup</a>. 
+            </td></tr><tr><td>MinimumSetupMask</td><td>16,383</td><td>
+            Minimum mask that will work backward compatibly. 
+            </td></tr><tr><td>InventoryEpcLen</td><td>16,384</td><td>
+            Inventory EPC length field in <a href="73de3ca5-4131-b36d-8e87-bb0fa46372de.htm">NurApi<span id="LST1F4557F_6" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ModuleSetup</a>.
+            </td></tr><tr><td>ReadRssiFilter</td><td>32,768</td><td>
+            Read RSSI filter field in <a href="73de3ca5-4131-b36d-8e87-bb0fa46372de.htm">NurApi<span id="LST1F4557F_7" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ModuleSetup</a>.
+            </td></tr><tr><td>WriteRssiFilter</td><td>65,536</td><td>
+             Write RSSI filter field in <a href="73de3ca5-4131-b36d-8e87-bb0fa46372de.htm">NurApi<span id="LST1F4557F_8" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ModuleSetup</a>.
+            </td></tr><tr><td>InventoryRssiFilter</td><td>131,072</td><td>
+            Inventory RSSI filter field in <a href="73de3ca5-4131-b36d-8e87-bb0fa46372de.htm">NurApi<span id="LST1F4557F_9" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ModuleSetup</a>.
+            </td></tr><tr><td>ReadTimeout</td><td>262,144</td><td>
+             Read timeout field in <a href="73de3ca5-4131-b36d-8e87-bb0fa46372de.htm">NurApi<span id="LST1F4557F_10" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ModuleSetup</a>.
+            </td></tr><tr><td>MaskFor05W</td><td>524,287</td><td>
+            Mask for 05W field in <a href="73de3ca5-4131-b36d-8e87-bb0fa46372de.htm">NurApi<span id="LST1F4557F_11" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ModuleSetup</a></td></tr><tr><td>WriteTimeout</td><td>524,288</td><td>
+            Write timeout field in <a href="73de3ca5-4131-b36d-8e87-bb0fa46372de.htm">NurApi<span id="LST1F4557F_12" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ModuleSetup</a>.
+            </td></tr><tr><td>LockTimeout</td><td>1,048,576</td><td>
+            Lock timeout field in <a href="73de3ca5-4131-b36d-8e87-bb0fa46372de.htm">NurApi<span id="LST1F4557F_13" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ModuleSetup</a>.
+            </td></tr><tr><td>Killtimeout</td><td>2,097,152</td><td>
+            Kill timeout field in <a href="73de3ca5-4131-b36d-8e87-bb0fa46372de.htm">NurApi<span id="LST1F4557F_14" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ModuleSetup</a>.
+            </td></tr><tr><td>Autoperiod</td><td>4,194,304</td><td>
+            Period setup field in <a href="73de3ca5-4131-b36d-8e87-bb0fa46372de.htm">NurApi<span id="LST1F4557F_15" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ModuleSetup</a>.
+            </td></tr><tr><td>PerAntennaPower</td><td>8,388,608</td><td>
+            Per antenna power field in <a href="73de3ca5-4131-b36d-8e87-bb0fa46372de.htm">NurApi<span id="LST1F4557F_16" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ModuleSetup</a>.
+            </td></tr><tr><td>PerAntennaOffset</td><td>16,777,216</td><td>
+            Power offset field in <a href="73de3ca5-4131-b36d-8e87-bb0fa46372de.htm">NurApi<span id="LST1F4557F_17" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ModuleSetup</a>.
+            </td></tr><tr><td>AntennaMaskEx</td><td>33,554,432</td><td>
+            Extended antenna mask field in <a href="38ea747a-faf2-f71d-635a-d5cfff737821.htm">AntennaId</a>.
+            </td></tr><tr><td>Autotune</td><td>67,108,864</td><td>
+            Runtime auto-tuning setup in <a href="ad4e139c-c4fc-1a21-5993-780cb5f0c9cd.htm">AutoPeriod</a>.
+            </td></tr><tr><td>PerAntennaPowerEx</td><td>134,217,728</td><td>
+            Per antenna power (extended) field in <a href="73de3ca5-4131-b36d-8e87-bb0fa46372de.htm">NurApi<span id="LST1F4557F_18" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ModuleSetup</a>.
+            </td></tr><tr><td>RxSensitivity</td><td>268,435,456</td><td>
+            Receiver sensitivity field in <a href="73de3ca5-4131-b36d-8e87-bb0fa46372de.htm">NurApi<span id="LST1F4557F_19" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ModuleSetup</a>.
+            </td></tr><tr><td>RfProfile</td><td>536,870,912</td><td>
+            rfProfile field in <a href="73de3ca5-4131-b36d-8e87-bb0fa46372de.htm">NurApi<span id="LST1F4557F_20" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ModuleSetup</a></td></tr><tr><td>All</td><td>1,073,741,823</td><td>
+            All setup fields are valid.
+            </td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>See Also</h2><div id="seeAlsoSection"><h4>Reference</h4><div><a href="29411023-0052-089d-f65f-b19dc7aea29c.htm">NurApiDotNet Namespace</a></div></div></div><div id="InThisArticleColumn" class="column is-hidden-mobile"><nav class="menu sticky is-hidden"><p class="menu-label"><strong>In This Article</strong></p><ul id="InThisArticleMenu" class="menu-list"><li><a class="quickLink">Definition</a></li><li><a class="quickLink">Members</a></li><li><a class="quickLink">See Also</a></li></ul></nav></div></div></div><footer id="PageFooter" class="footer border-top py-3 fixedFooter"><div class="columns"><div class="column"> 
+				</div><div class="column"> 
+				</div></div></footer></div><script>$(function(){
+SetDefaultLanguage("cs");
+LoadTocFile(null, null);
+InitializeQuickLinks();
+
+$(".toggleSection" ).click(function () {
+    SectionExpandCollapse(this);
+});
+
+$(".toggleSection").keypress(function () {
+    SectionExpandCollapseCheckKey(this, event)
+});
+hljs.highlightAll();
+});</script></body></html>

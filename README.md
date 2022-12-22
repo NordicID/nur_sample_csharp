@@ -20,7 +20,7 @@ The NurApi library is API framework in between your application and the physical
 	- Provides serial port transport and discovery
 
 ## Documentation
-API documentation is available at [[here](https://nordicid.github.io/nur_sample_csharp/)]([https://nordicid.github.io/nurapidocs](https://nordicid.github.io/nur_sample_csharp/))
+API documentation is available at [nordicid.github.io/nur_sample_csharp/](https://nordicid.github.io/nur_sample_csharp/)
 
 ## Samples
 - Simple multiplatform console app

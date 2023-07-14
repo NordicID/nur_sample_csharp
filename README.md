@@ -27,7 +27,7 @@ API documentation is available at [nordicid.github.io/nur_sample_csharp/](https:
 	- [NurApiDocSample](NurApiDocSample)
 - Mobile multiplatform sample
 	- https://github.com/NordicID/rfiddemo_xamarin
-- AvalnoniaUI for FR22 (multiplatform) sample
+- AvaloniaUI for FR22 (multiplatform) sample
 	- https://github.com/NordicID/fr22_samples/tree/master/5.%20AvaloniaUISample
 - BlazorServerSample for FR22 (multiplatform) sample
 	- https://github.com/NordicID/fr22_samples/tree/master/6.%20BlazorServerAppSample
